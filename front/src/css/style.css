@@ -1,0 +1,123 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto 50px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.form__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__title {
+  width: calc(100% - 70px);
+  border: 1px solid #aaa;
+  padding-left: 10px;
+}
+
+.form__title::placeholder {
+  color: #aaa;
+}
+
+.form__submit {
+  height: 50px;
+  width: 50px;
+  background-color: blueviolet;
+  position: relative;
+}
+
+.form__submit::after,
+.form__submit::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: white;
+  top: calc((50px - 2px) / 2);
+  left: calc((50px - 20px) / 2);
+}
+
+.form__submit::before {
+  transform: rotate(90deg);
+}
+
+.task-list {
+  margin-top: 30px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task__title {
+  font-size: 20px;
+  margin-left: 15px;
+  word-break: break-all;
+}
+
+.task--done .task__title {
+  color: #aaa;
+}
+
+.task__btn {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.task__btn::before {
+  content: "";
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 7px;
+  transform: rotate(-45deg);
+  position: absolute;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.task--done .task__btn {
+  background-color: orange;
+  cursor: not-allowed;
+}
+
+.clear {
+  margin-top: 30px;
+  display: flex;
+  justify-content: end;
+}
+
+.clear__btn {
+  display: flex;
+  cursor: pointer;
+}
+
+.clear__icon {
+  color: grey;
+}
+
+.clear__title {
+  font-size: 15px;
+  color: grey;
+  margin-left: 5px;
+}

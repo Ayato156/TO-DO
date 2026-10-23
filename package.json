@@ -1,0 +1,37 @@
+{
+  "name": "todo_app",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "db:reset": "npm run db:reset -w api",
+    "watch:api": "npm run watch -w api",
+    "watch:front": "npm run watch -w front",
+    "test": "npm run test -w e2e",
+    "test:get_tasks": "npm run test:get_tasks -w e2e",
+    "test:add_todo": "npm run test:add_todo -w e2e",
+    "test:done_todo": "npm run test:done_todo -w e2e",
+    "test:clear_all_done_tasks": "npm run test:clear_all_done_tasks -w e2e",
+    "test:welcome_message": "npm run test:welcome_message -w e2e",
+    "lint:check": "npm run lint:check --ws",
+    "lint:fix": "npm run lint:fix --ws",
+    "format:check": "npm run format:check --ws",
+    "format:fix": "npm run format:fix --ws"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  },
+  "overrides": {
+    "glob": "11.0.1"
+  },
+  "workspaces": [
+    "api",
+    "e2e",
+    "front"
+  ]
+}

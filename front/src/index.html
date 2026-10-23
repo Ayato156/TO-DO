@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <script type="module" src="./ts/index.ts"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="title">TODO APP</h1>
+        <form class="form">
+          <div class="form__body">
+            <input
+              class="form__title"
+              data-test="input-title"
+              placeholder="Add your new todo"
+            />
+            <button class="form__submit" data-test="submit"></button>
+          </div>
+        </form>
+        <ul class="task-list">
+          <li class="task task--done">
+            <div class="task__btn"></div>
+            <div data-test="task-title" class="task__title">dummy task</div>
+          </li>
+          <li class="task task--todo">
+            <div class="task__btn"></div>
+            <div data-test="task-title" class="task__title">dummy task</div>
+          </li>
+        </ul>
+        <div class="clear">
+          <div class="clear__btn">
+            <span class="clear__icon material-symbols-outlined">delete</span>
+            <span class="clear__title">clear all done tasks</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "type": "module",
+  "scripts": {
+    "watch": "dotenv -e config/.env.development -- tsx watch ./bin/run_server.ts",
+    "start": "dotenv -e config/.env.development -- tsx ./bin/run_server.ts",
+    "start:test": "dotenv -e config/.env.test -- tsx ./bin/run_server.ts",
+    "db:reset": "dotenv -e config/.env.development -- tsx ./bin/reset_db.ts",
+    "db:reset:test": "dotenv -e config/.env.test -- tsx ./bin/reset_db.ts",
+    "lint:check": "eslint",
+    "lint:fix": "eslint --fix",
+    "format:check": "prettier --check 'src/**/*.ts'",
+    "format:fix": "prettier --write 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv-cli": "^8.0.0",
+    "express": "^4.21.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0"
+  }
+}
